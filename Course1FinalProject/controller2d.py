@@ -30,7 +30,7 @@ class Controller2D(object):
         self.v_previous = 0
         self.t_previous = 0
         self.error_previous = 0
-        self.i_comp = 0
+        self.integral = 0
 
     def update_values(self, x, y, yaw, speed, timestamp, frame):
         self._current_x         = x
@@ -121,7 +121,7 @@ class Controller2D(object):
         """
         # self.vars.create_var('v_previous', 0.0)
         # self.vars.create_var('t_previous', t)
-        # self.vars.create_var('i_comp', 0.0)
+        # self.vars.create_var('integral', 0.0)
 
         # PID Controller variables
         Kp = 0.9
@@ -162,35 +162,40 @@ class Controller2D(object):
                     brake_output    : Brake output (0 to 1)
             """
 
-            ######################################################
-            ######################################################
+            ###########################################################
+            ###########################################################
             # MODULE 7: IMPLEMENTATION OF LONGITUDINAL CONTROLLER HERE
-            ######################################################
-            ######################################################
+            ###########################################################
+            ###########################################################
             """
                 Implement a longitudinal controller here. Remember that you can
                 access the persistent variables declared above here. For
                 example, can treat self.vars.v_previous like a "global variable".
             """
 
-            v_error = v_desired - v
-            dt = t - self.t_previous 
-            self.t_previous = t
+            # PID control
+            dt = t - self.t_previous    # Getting time interval
 
-            p_comp = Kp * v_error
+            v_error = v_desired - v     # Error term
 
-            self.i_comp += Ki * v_error * dt  
+            self.t_previous = t         # Updating actual time
+
+            prop = Kp * v_error         # Proportional 
+
+            self.integral += Ki * v_error * dt  # Integral
             
-            d_comp = Kd * (v_error - self.error_previous) / dt
-            self.error_previous = v_error
+            derivative = Kd * (v_error - self.error_previous) / dt  # Derivative
 
-            a = p_comp + self.i_comp + d_comp
+            self.error_previous = v_error   # Updating actual error
+
+            u = prop + self.integral + derivative   # Control variable
             
             # Change these outputs with the longitudinal controller. Note that
             # brake_output is optional and is not required to pass the
             # assignment, as the car will naturally slow down over time.
-            throttle_output = a
-            brake_output    = 0
+
+            throttle_output = u     # Throttle position (if u >= 0)
+            brake_output    = 0     # Break position (If you want to set this variable, use: (if < u, so brake_output = -u)
 
             ######################################################
             ######################################################
@@ -203,20 +208,31 @@ class Controller2D(object):
                 example, can treat self.vars.v_previous like a "global variable".
             """
 
-             # Pure Pursuit Method
-            K_dd = 1 # Look ahead gain
-            L = 3.0 # Distance between rear and front axe
+            # Pure Pursuit Method (You may use others like Stanley controller)
+            K_dd = 1    # Look ahead gain (define this by yourself)
+            L = 3.0     # Distance between rear and front axe
 
-            track_point_x = waypoints[len(self._waypoints) - 1][0]
-            track_point_y = waypoints[len(self._waypoints) - 1][1]
+            # Our reference signal consists of both speed and position
+            track_point_x = waypoints[len(self._waypoints) - 1][0]      # Getting x waypoint
+            track_point_y = waypoints[len(self._waypoints) - 1][1]      # Getting y waypoint
 
-            rear_x = x - L / 2 * np.cos(yaw) 
-            rear_y = y - L / 2 * np.sin(yaw)
+            # In Pure pursuit controller, the reference frame is located at rear axle of the car 
+            # Yaw angle: Yaw is the heading angle of the vehicle with respect to the global frame of reference (varies from -pi to pi)
+            rear_x = x - L / 2 * np.cos(yaw)    # Rear x position (a simple triangle)
+            rear_y = y - L / 2 * np.sin(yaw)    # Rear y position (a simple triangle)
 
+            # - In this method I didn't use the look ahead distance directly
+            # - I stablished a look ahead distance constant as a minimum 
+            # - Then searches for all the points after the first one and if the distance of this look ahead point is over the look 
+            # ahead distance minimum then you need calculate alpha hat 
+            # - Finally calculates alpha based on alpha hat
+            # With alpha os easy to calculate the steering angle
+
+            # np.arctan2((track_point_y - rear_y),(track_point_x - rear_x)) = alpha hat -> Calculate the ld based on the current x, y and the current waypoint x, y
             alpha = np.arctan2((track_point_y - rear_y),(track_point_x - rear_x)) - yaw
             
             # Change the steer output with the lateral controller. 
-            steer_output = np.arctan((2 * L * np.sin(alpha) )/(K_dd * v))
+            steer_output = np.arctan((2 * L * np.sin(alpha) )/(K_dd * v))   # Steering angle as seen previous
 
             ######################################################
             # SET CONTROLS OUTPUT
