@@ -26,6 +26,12 @@ class Controller2D(object):
         self._pi                 = np.pi
         self._2pi                = 2.0 * np.pi
 
+        # Controller variables
+        self.v_previous = 0
+        self.t_previous = 0
+        self.error_previous = 0
+        self.i_comp = 0
+
     def update_values(self, x, y, yaw, speed, timestamp, frame):
         self._current_x         = x
         self._current_y         = y
@@ -113,7 +119,14 @@ class Controller2D(object):
             Example: Accessing the value from 'v_previous' to be used
             throttle_output = 0.5 * self.vars.v_previous
         """
-        self.vars.create_var('v_previous', 0.0)
+        # self.vars.create_var('v_previous', 0.0)
+        # self.vars.create_var('t_previous', t)
+        # self.vars.create_var('i_comp', 0.0)
+
+        # PID Controller variables
+        Kp = 0.9
+        Ki = 0.5
+        Kd = 0.2
 
         # Skip the first frame to store previous values properly
         if self._start_control_loop:
@@ -159,11 +172,24 @@ class Controller2D(object):
                 access the persistent variables declared above here. For
                 example, can treat self.vars.v_previous like a "global variable".
             """
+
+            v_error = v_desired - v
+            dt = t - self.t_previous 
+            self.t_previous = t
+
+            p_comp = Kp * v_error
+
+            self.i_comp += Ki * v_error * dt  
+            
+            d_comp = Kd * (v_error - self.error_previous) / dt
+            self.error_previous = v_error
+
+            a = p_comp + self.i_comp + d_comp
             
             # Change these outputs with the longitudinal controller. Note that
             # brake_output is optional and is not required to pass the
             # assignment, as the car will naturally slow down over time.
-            throttle_output = 0
+            throttle_output = a
             brake_output    = 0
 
             ######################################################
@@ -176,9 +202,21 @@ class Controller2D(object):
                 access the persistent variables declared above here. For
                 example, can treat self.vars.v_previous like a "global variable".
             """
+
+             # Pure Pursuit Method
+            K_dd = 1 # Look ahead gain
+            L = 3.0 # Distance between rear and front axe
+
+            track_point_x = waypoints[len(self._waypoints) - 1][0]
+            track_point_y = waypoints[len(self._waypoints) - 1][1]
+
+            rear_x = x - L / 2 * np.cos(yaw) 
+            rear_y = y - L / 2 * np.sin(yaw)
+
+            alpha = np.arctan2((track_point_y - rear_y),(track_point_x - rear_x)) - yaw
             
             # Change the steer output with the lateral controller. 
-            steer_output    = 0
+            steer_output = np.arctan((2 * L * np.sin(alpha) )/(K_dd * v))
 
             ######################################################
             # SET CONTROLS OUTPUT
