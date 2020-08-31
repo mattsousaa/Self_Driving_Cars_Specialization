@@ -32,4 +32,5 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 
 ![image](https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png)
 
-<img src="https://render.githubusercontent.com/render/math?math=e = "> crosstalk error.
+<img src="https://render.githubusercontent.com/render/math?math=e ="> crosstalk error.
+<img src="https://render.githubusercontent.com/render/math?math=theta_c ="> Heading of the vehicle (Yaw).
