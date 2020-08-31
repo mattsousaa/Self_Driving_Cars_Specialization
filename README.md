@@ -34,7 +34,7 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 <img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png"/>
 </p>
 
-The Heading error **(<img src="https://render.githubusercontent.com/render/math?math=\psi">)**  is the component of velocity perpendicular to trajectory divided by ICR radius. For lateral control the desired heading must be zero. The Crosstalk error **(<img src="https://render.githubusercontent.com/render/math?math=e">)** is the distance fromcenter of front axle to the closest point on path.
+The Heading error **(<img src="https://render.githubusercontent.com/render/math?math=\psi">)**  is the component of velocity perpendicular to trajectory divided by ICR radius. For lateral control the desired heading must be zero. The Crosstalk error **(<img src="https://render.githubusercontent.com/render/math?math=e">)** is the distance from center of front axle to the closest point on path. Yaw angle **(<img src="https://render.githubusercontent.com/render/math?math=\theta_c">)** is the heading angle of the vehicle with respect to the global frame of reference (varies from **(<img src="https://render.githubusercontent.com/render/math?math=-\pi">)** to **(<img src="https://render.githubusercontent.com/render/math?math=-\pi">)**)
 
 **- <p><img src="https://render.githubusercontent.com/render/math?math=e=">Crosstalk error</p>** 
 **- <p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw)</p>**  
