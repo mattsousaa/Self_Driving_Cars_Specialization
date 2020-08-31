@@ -14,7 +14,7 @@ This is the final project assignment of Introduction to Self-Driving Cars Course
 In this project, I implemented a controller in Python and used it to drive a car autonomously around a track in Carla Simulator. The output of the controller will be the vehicle throttle, brake and steering angle commands. The throttle and brake come from the Longitudinal speed control and the steering comes from the Lateral Control.
 
 ### 1. Longitudinal Control
-![image](https://user-images.githubusercontent.com/59261333/73611832-b9cd6480-45ee-11ea-8b15-58c1068bf7ed.png)
+![image](https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/pid_longitudinal.png)
 
 For longitudinal control I implemented a PID Controller responsible for take the desired speed as the reference and outputs throttle and brake.
 
