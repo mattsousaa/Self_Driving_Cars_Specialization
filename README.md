@@ -32,11 +32,11 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 
 ![image](https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png)
 
-**<p><img src="https://render.githubusercontent.com/render/math?math=e=">crosstalk error.</p>**
-<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw).</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=\psi=">Heading error.</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=\delta=">Steering angle.</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c=">Heading of the path (path Yaw).</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=v=">Current forward speed (meters per second).</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=x_c=">Current X frame position (meters).</p>
-<p><img src="https://render.githubusercontent.com/render/math?math=y_c=">Current Y frame position (meters).</p>
+**<p><img src="https://render.githubusercontent.com/render/math?math=e=">Crosstalk error.</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw).</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=\psi=">Heading error.</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=\delta=">Steering angle.</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c=">Heading of the path (path Yaw).</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=v=">Current forward speed (meters per second).</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=x_c=">Current X frame position (meters).</p>**
+**<p><img src="https://render.githubusercontent.com/render/math?math=y_c=">Current Y frame position (meters).</p>**
