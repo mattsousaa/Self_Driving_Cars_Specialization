@@ -31,7 +31,7 @@ To complete the longitudinal control, we must convert the acceleration output fr
 For lateral control, I implemented the Pure Pursuit controller. First of all, we need to define some orientation axes for the car as seen below:
 
 <p align="center">
-img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png"/>
+<img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png"/>
 </p>
 
 **<p><img src="https://render.githubusercontent.com/render/math?math=e=">Crosstalk error.</p>**
