@@ -36,5 +36,5 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 <p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw).</p>
 <p><img src="https://render.githubusercontent.com/render/math?math=\psi=">Heading error.</p>
 <p><img src="https://render.githubusercontent.com/render/math?math=\delta=">Steering angle.</p>
-<img src="https://render.githubusercontent.com/render/math?math=e^{i %2B\pi} =x%2B1">
+<img src="https://render.githubusercontent.com/render/math?math=e^{i %2B\pi} =x%2B\theta_c">
 <p><img src="https://render.githubusercontent.com/render/math?math=$\psi %2B\theta_c$=">Heading of the path (path Yaw).</p> 
