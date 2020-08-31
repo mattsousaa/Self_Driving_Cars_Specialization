@@ -26,4 +26,10 @@ Finally, the derivative term KD dampens the overshoot caused by the integration 
 
 To complete the longitudinal control, we must convert the acceleration output from the PID controller into throttle and brake commands. For simplicity, positive outputs will be throttle and negative outputs will correspond to brake.
 
+### 2. Lateral Control
 
+For lateral control, I implemented the Pure Pursuit controller. First of all, we need to define some orientation axes for the car as seen below:
+
+![image](https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png)
+
+<img src="https://render.githubusercontent.com/render/math?math=e = "> crosstalk error.
