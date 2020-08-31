@@ -230,7 +230,7 @@ class Controller2D(object):
 
             # np.arctan2((track_point_y - rear_y),(track_point_x - rear_x)) = alpha hat -> Calculate the ld based on the current x, y and the current waypoint x, y
             alpha = np.arctan2((track_point_y - rear_y),(track_point_x - rear_x)) - yaw
-            
+
             # Change the steer output with the lateral controller. 
             steer_output = np.arctan((2 * L * np.sin(alpha) )/(K_dd * v))   # Steering angle as seen previous
 
@@ -240,6 +240,8 @@ class Controller2D(object):
             self.set_throttle(throttle_output)  # in percent (0 to 1)
             self.set_steer(steer_output)        # in rad (-1.22 to 1.22)
             self.set_brake(brake_output)        # in percent (0 to 1)
+
+            print(throttle_output, steer_output, alpha)
 
         ######################################################
         ######################################################
