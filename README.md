@@ -36,14 +36,14 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 
 | Variable   |      Name      |  Cool |
 |----------|:-------------:|------:|
-| **<p><img src="https://render.githubusercontent.com/render/math?math=e=">Crosstalk error.</p>** |  left-aligned | $1600 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw).</p>** |    centered   |   $12 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi=">Heading error.</p>** | right-aligned |    $1 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\delta=">Steering angle.</p>** | right-aligned |    $1 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c=">Heading of the path (path Yaw).</p>** | right-aligned |    $1 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=v=">Current forward speed (meters per second).</p>** | right-aligned |    $1 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=x_c=">Current X frame position (meters).</p>** | right-aligned |    $1 |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=y_c=">Current Y frame position (meters).</p>** | right-aligned |    $1 |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=e="></p>** |  left-aligned | Crosstalk error |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c="></p>** |    centered   |   Heading of the vehicle (Yaw) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi="></p>** | right-aligned |    Heading error |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\delta="></p>** | right-aligned |   Steering angle |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c="></p>** | right-aligned |    Heading of the path (path Yaw) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=v="></p>** | right-aligned |    Current forward speed (meters per second) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=x_c="></p>** | right-aligned |    Current X frame position (meters) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=y_c="></p>** | right-aligned |    Current Y frame position (meters) |
 
 
 
