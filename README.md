@@ -10,7 +10,20 @@ This is the final project assignment of Introduction to Self-Driving Cars Course
 * The output of the controller will be the vehicle throttle, brake and steering angle commands.
 * The throttle and brake come from the Longitudinal speed control and the steering comes from our Lateral Control.
 
-### 1. Longitudinal Control
+## Self Driving Cars Longitudinal and Lateral Control Design
 In this project, I implemented a controller in Python and used it to drive a car autonomously around a track in Carla Simulator. The output of the controller will be the vehicle throttle, brake and steering angle commands. The throttle and brake come from the Longitudinal speed control and the steering comes from the Lateral Control.
+
+### 1. Longitudinal Control
+![image](https://user-images.githubusercontent.com/59261333/73611832-b9cd6480-45ee-11ea-8b15-58c1068bf7ed.png)
+
+For longitudinal control I implemented a PID Controller responsible for take the desired speed as the reference and outputs throttle and brake.
+
+A PID controller consists of three components. First, a pure gain Kp that scales the vehicle acceleration based on the speed error. This ensures that the vehicle is accelerating in the correct direction with the magnitude proportional to the error.
+
+Second, in integral term KI sets up the output based on accumulated past errors. This ensures the steady steed errors are eliminated for ramp referencing.
+
+Finally, the derivative term KD dampens the overshoot caused by the integration term.
+
+To complete the longitudinal control, we must convert the acceleration output from the PID controller into throttle and brake commands. For simplicity, positive outputs will be throttle and negative outputs will correspond to brake.
 
 
