@@ -36,14 +36,14 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 
 | Variable   |      Name      |  Cool |
 |----------|:-------------:|------:|
-| **<p><img src="https://render.githubusercontent.com/render/math?math=e="></p>** |  left-aligned | Crosstalk error |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c="></p>** |    centered   |   Heading of the vehicle (Yaw) |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi="></p>** | right-aligned |    Heading error |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\delta="></p>** | right-aligned |   Steering angle |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c="></p>** | right-aligned |    Heading of the path (path Yaw) |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=v="></p>** | right-aligned |    Current forward speed (meters per second) |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=x_c="></p>** | right-aligned |    Current X frame position (meters) |
-| **<p><img src="https://render.githubusercontent.com/render/math?math=y_c="></p>** | right-aligned |    Current Y frame position (meters) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=e"></p>** | Crosstalk error |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\theta_c"></p>** | Heading of the vehicle (Yaw) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi"></p>** | Heading error |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\delta"></p>** | Steering angle |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c"></p>** | Heading of the path (path Yaw) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=v"></p>** | Current forward speed (meters per second) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=x_c"></p>** | Current X frame position (meters) |
+| **<p><img src="https://render.githubusercontent.com/render/math?math=y_c"></p>** | Current Y frame position (meters) |
 
 
 
