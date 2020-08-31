@@ -28,15 +28,19 @@ To complete the longitudinal control, we must convert the acceleration output fr
 
 ### 2. Lateral Control
 
-For lateral control, I implemented the Pure Pursuit controller. First of all, we need to define some orientation axes for the car as seen below:
+For lateral control, I implemented the Pure Pursuit controller. First of all, we need to define some orientation axles for the vehicle (bicycle) model as seen below. All states variables and inputs are defined relative to the centre of front axle. Main vehicle reference frame for lateral control can be at: The center of front axle, the center of gravity (cg) or the center of rear axle.
 
 <p align="center">
 <img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/car_axles.png"/>
 </p>
 
+The Heading error **(<img src="https://render.githubusercontent.com/render/math?math=\psi">)**  is the component of velocity perpendicular to trajectory divided by ICR radius. For lateral control the desired heading must be zero. 
+  
+The Crosstalk error **(<img src="https://render.githubusercontent.com/render/math?math=e=">)**
+
 **- <p><img src="https://render.githubusercontent.com/render/math?math=e=">Crosstalk error</p>** 
 **- <p><img src="https://render.githubusercontent.com/render/math?math=\theta_c=">Heading of the vehicle (Yaw)</p>**  
-**- <p><img src="https://render.githubusercontent.com/render/math?math=\psi=">Heading error</p>**  
+
 **<p><img src="https://render.githubusercontent.com/render/math?math=\delta=">Steering angle</p>**   
 **<p><img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c=">Heading of the path (path Yaw)</p>**  
 **<p><img src="https://render.githubusercontent.com/render/math?math=v=">Current forward speed (meters per second)</p>**   
