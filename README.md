@@ -46,7 +46,11 @@ As seen in the figure above I didn't use the look ahead distance directly. Here 
 
 ## Self-Driving Vehicle Control Simulation
 
-I used Windows 10 to perform this practice and followed the [tutorials](https://d3c33hcgiwev3.cloudfront.net/IFfxQie8Eem9HA6xGGaRfg_20f6060027bc11e98ed3dfcfdba7c72b_CARLA-Setup-Guide-_Windows-x64_.pdf?Expires=1599004800&Signature=Xk8ZORr3BqsBpNycEl5byliVQk60qgNhLEbt1So~aS8UgFVaEoYSC41F3GeeioJpcI-S08CBCD1OMvs0Fok6I-NOzJhDPtkx95vwx2F8Ypb-Q6MJzy0P2pxgCfnuJb1bvIIP~yntnYzMxogTKLdMx2Gvq923zPW~Oi0fCZHRK20_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A) provided for installation. To do this assignment, the [CARLA](https://carla.org/) simulator along with the assignment code needs to be installed. Please follow these instructions. The simulator will begin to run if the module_7 client connects to the server properly. It will open two new feedback windows, one of which shows the trajectory and the other which shows the controls feedback. 
+I used Windows 10 to perform this practice and followed the [tutorials](https://d3c33hcgiwev3.cloudfront.net/IFfxQie8Eem9HA6xGGaRfg_20f6060027bc11e98ed3dfcfdba7c72b_CARLA-Setup-Guide-_Windows-x64_.pdf?Expires=1599004800&Signature=Xk8ZORr3BqsBpNycEl5byliVQk60qgNhLEbt1So~aS8UgFVaEoYSC41F3GeeioJpcI-S08CBCD1OMvs0Fok6I-NOzJhDPtkx95vwx2F8Ypb-Q6MJzy0P2pxgCfnuJb1bvIIP~yntnYzMxogTKLdMx2Gvq923zPW~Oi0fCZHRK20_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A) provided for installation. To do this assignment, the [CARLA](https://carla.org/) simulator along with the assignment code needs to be installed. Please follow these instructions. The simulator will begin to run if the **module_7 client** connects to the server properly. It will open two new feedback windows, one of which shows the trajectory and the other which shows the controls feedback as you can see below.
+
+<p align="center">
+<img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/Capturarw.PNG"/>
+</p>
 
 
 
