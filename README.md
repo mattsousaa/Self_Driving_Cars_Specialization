@@ -36,7 +36,11 @@ For lateral control, I implemented the Pure Pursuit controller. First of all, we
 
 The Heading error **(<img src="https://render.githubusercontent.com/render/math?math=\psi">)**  is the component of velocity perpendicular to trajectory divided by ICR radius. For lateral control the desired heading must be zero. The Crosstalk error **(<img src="https://render.githubusercontent.com/render/math?math=e">)** is the distance from center of front axle to the closest point on path. Yaw angle **(<img src="https://render.githubusercontent.com/render/math?math=\theta_c">)** is the heading angle of the vehicle with respect to the global frame of reference (varies from **<img src="https://render.githubusercontent.com/render/math?math=-\pi">** to **<img src="https://render.githubusercontent.com/render/math?math=-\pi">**). Similarly, the heading of the path or path Yaw is the sum of **<img src="https://render.githubusercontent.com/render/math?math=\psi %2B\theta_c">**. Lastly, the **<img src="https://render.githubusercontent.com/render/math?math=v">** variable is the current forward speed of the bicycle.
 
-The pure pursuit method consists of geometrically calculating the trajectory curvature. This method connects the centre of rear axle location to a target point on the path ahead of the vehicle. Steering angle determined by target point location and angle between the vehicle's heading direction and lookahead direction. Using the bicycle model the steering angle can be very easily calculated. The crosstalk error is defined here as the lateral distance between the heading vector and the target poin.
+The Pure Pursuit method consists of geometrically calculating the trajectory curvature. This method connects the centre of rear axle location to a target point on the path ahead of the vehicle. Steering angle determined by target point location and angle between the vehicle's heading direction and lookahead direction. Using the bicycle model the steering angle (**<img src="https://render.githubusercontent.com/render/math?math=\delta">**)can be very easily calculated. The crosstalk error is defined here as the lateral distance between the heading vector and the target point.
+
+<p align="center">
+<img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/longitudinal.png"/>
+</p>
 
 
 
