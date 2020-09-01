@@ -56,5 +56,28 @@ The trajectory feedback will contain the car, start and end positions, entire pa
 
 The controls feedback shows the throttle, steering and brake outputs, as well as the speed response for the simulation (desired speed and current speed in the single plot). This is a general feedback for viewing what the client is sending to the CARLA server in terms of control commands. The desired speed is set to the closest interpolated speed point to the current position of the car. Below the simulator is the command prompt with throttle, steering and **<img src="https://render.githubusercontent.com/render/math?math=\alpha">** values.
 
+## Results from [Carla Simulator](https://carla.org/)
 
+### Longitudinal Control
 
+To evaluate the performance of the longitudinal controller the next image is provided. In the plot, the speed profile proposed to drive the car around the track is in orange, and the real vehicle speed obtained by using the PID controller is in blue.
+
+<p align="center">
+<img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/Figure_2.png"/>
+</p>
+
+>During the whole trajectory, the controller provided the right outputs to the vehicle to mantain the desired speed within the proposed profile; however, at some point (between the 500 to 750 waypoints) the controller did not reach the desired speed, but a possible solution for this issue is to force a brake signal to reduce the speed in the corner.
+
+### Lateral Control
+
+Similar to the longitudinal controller, a image is provided to shown the performance of the lateral controller. In the plot, the trajectory proposed to drive the car around the track is shown in blue, and the trayectory followed by the vehicle by using the Pure Pursuit Controller is shown in orange.
+
+<p align="center">
+<img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/Figure_1.png"/>
+</p>
+
+>In this case, the vehicle followed the desired trajectory. The Pure Pursuit Controller had a great performance overall and its precision was good enough for this case.
+
+Other types of controllers such as the Stanley Control or even the Model Predictive Control could be implemented to try to enhance the system performance.
+
+If you have any doubts or suggestions feel free to contact me.
