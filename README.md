@@ -42,7 +42,7 @@ The Pure Pursuit method consists of geometrically calculating the trajectory cur
 <img src="https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/longitudinal.png"/>
 </p>
 
-As seen in the figure above I didn't use the look ahead distance directly. First, I stablished a look ahead distance constant as a minimum. Then I search for all the points after the first one and if the distance of this look ahead point is over the look ahead distance minimum then I calculate **<imgsrc="https://render.githubusercontent.com/render/math?math=\hat{\alpha}">**. With alpha is easy to calculate the steering angle as show in the figure. Finaly I tuned the look ahead gain.
+As seen in the figure above I didn't use the look ahead distance directly. First, I stablished a look ahead distance constant as a minimum. Then I search for all the points after the first one and if the distance of this look ahead point is over the look ahead distance minimum then I calculate **<img src="https://render.githubusercontent.com/render/math?math=\hat{\alpha}">**. With alpha is easy to calculate the steering angle as show in the figure. Finaly I tuned the look ahead gain.
 
 
 
