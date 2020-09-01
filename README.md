@@ -20,9 +20,9 @@ For longitudinal control I implemented a PID Controller responsible for take the
 
 A PID controller consists of three components. First, a pure gain Kp that scales the vehicle acceleration based on the speed error. This ensures that the vehicle is accelerating in the correct direction with the magnitude proportional to the error.
 
-Second, in integral term KI sets up the output based on accumulated past errors. This ensures the steady steed errors are eliminated for ramp referencing.
+Second, in integral term Ki sets up the output based on accumulated past errors. This ensures the steady steed errors are eliminated for ramp referencing.
 
-Finally, the derivative term KD dampens the overshoot caused by the integration term.
+Finally, the derivative term Kd dampens the overshoot caused by the integration term.
 
 To complete the longitudinal control, we must convert the acceleration output from the PID controller into throttle and brake commands. For simplicity, positive outputs will be throttle and negative outputs will correspond to brake.
 
