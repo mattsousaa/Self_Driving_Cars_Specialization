@@ -1,6 +1,6 @@
 # Self_Driving_Vehicle_Control
 
-This is the final project assignment of Introduction to Self-Driving Cars Course offered by University of Toronto on Coursera. The "controller2d.py" file contains a controller object. The final result can be consulted on YouTube through the link: https://www.youtube.com/watch?v=OMtp3IUQzX0.
+This is the final project assignment of [Introduction to Self-Driving Cars Course](https://www.coursera.org/learn/intro-self-driving-cars) offered by University of Toronto on Coursera. The "controller2d.py" file contains a controller object. The final result can be consulted on YouTube through the link: https://www.youtube.com/watch?v=OMtp3IUQzX0.
 
 ## Project notes:
 
@@ -10,8 +10,8 @@ This is the final project assignment of Introduction to Self-Driving Cars Course
 * The output of the controller will be the vehicle throttle, brake and steering angle commands.
 * The throttle and brake come from the Longitudinal speed control and the steering comes from our Lateral Control.
 
-## Self Driving Cars Longitudinal and Lateral Control Design
-In this project, I implemented a controller in Python and used it to drive a car autonomously around a track in Carla Simulator. The output of the controller will be the vehicle throttle, brake and steering angle commands. The throttle and brake come from the Longitudinal speed control and the steering comes from the Lateral Control.
+## Self-Driving Cars Longitudinal and Lateral Control Design
+In this project, I implemented a controller in Python and used it to drive a car autonomously around a track in [Carla Simulator](https://carla.org/). The output of the controller will be the vehicle throttle, brake and steering angle commands. The throttle and brake come from the Longitudinal speed control and the steering comes from the Lateral Control.
 
 ### 1. Longitudinal Control
 ![image](https://github.com/mattsousaa/Self_Driving_Vehicle_Control/blob/master/images/pid_longitudinal.png)
@@ -43,6 +43,10 @@ The Pure Pursuit method consists of geometrically calculating the trajectory cur
 </p>
 
 As seen in the figure above I didn't use the look ahead distance directly. Here I associated the yaw to get **<img src="https://render.githubusercontent.com/render/math?math=\alpha">** instead of crosstrack error. First, I stablished a look ahead distance constant as a minimum. Then I search for all the points after the first one and if the distance of this look ahead point is over the look ahead distance minimum then I calculate **<img src="https://render.githubusercontent.com/render/math?math=\hat{\alpha}">**. With alpha is easy to calculate the steering angle as show in the figure. Finaly I tuned the look ahead gain. For more details read the commented code.
+
+## Self-Driving Vehicle Control Simulation
+
+I used Windows 10 to perform this practice and followed the [tutorials](https://d3c33hcgiwev3.cloudfront.net/IFfxQie8Eem9HA6xGGaRfg_20f6060027bc11e98ed3dfcfdba7c72b_CARLA-Setup-Guide-_Windows-x64_.pdf?Expires=1599004800&Signature=Xk8ZORr3BqsBpNycEl5byliVQk60qgNhLEbt1So~aS8UgFVaEoYSC41F3GeeioJpcI-S08CBCD1OMvs0Fok6I-NOzJhDPtkx95vwx2F8Ypb-Q6MJzy0P2pxgCfnuJb1bvIIP~yntnYzMxogTKLdMx2Gvq923zPW~Oi0fCZHRK20_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A) provided for installation. To do this assignment, the [CARLA](https://carla.org/) simulator along with the assignment code needs to be installed. Please follow these instructions. The simulator will begin to run if the module_7 client connects to the server properly. It will open two new feedback windows, one of which shows the trajectory and the other which shows the controls feedback. 
 
 
 
