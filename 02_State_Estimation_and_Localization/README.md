@@ -1,4 +1,4 @@
-# An_Autonomous_Vehicle_State_Estimator
+# An_Autonomous_Vehicle_State_Estimator (Multi-Sensor (IMU + LIDAR) Fusion for Pose Estimation)
 
 This is the final project assignment of [State Estimation and Localization for Self-Driving Cars Course](https://www.coursera.org/learn/state-estimation-localization-self-driving-cars) offered by University of Toronto on Coursera. The "es_ekf.py" file contains the state estimator. In this assignment, I implemented the Error-State Extended Kalman Filter (ES-EKF) to localize a vehicle using data from the [Carla Simulator](https://carla.org/).
 
@@ -37,8 +37,6 @@ The bad news is that the world does not behave in a linear fashion. For this, Ka
 * Using **quaternion kinematics** as the rotation process update
 * Implement the algorithm in `Python3`
 * Sample pictures for the results
-
-## Final Project: Multi-Sensor (IMU + Lidar) Fusion for Pose Estimation
 
 ## Results
 * Part 1: Ideal case
