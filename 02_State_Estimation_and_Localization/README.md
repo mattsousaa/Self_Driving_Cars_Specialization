@@ -1,4 +1,4 @@
-# Final project: Multi-Sensor (IMU+LIDAR) Fusion for Pose Estimation
+# Multi-Sensor (IMU+LIDAR) Fusion for Pose Estimation
 
 This is the final project assignment of [State Estimation and Localization for Self-Driving Cars Course](https://www.coursera.org/learn/state-estimation-localization-self-driving-cars) offered by University of Toronto on Coursera. The "es_ekf.py" file contains the state estimator. In this assignment, I implemented the Error-State Extended Kalman Filter (ES-EKF) to localize a vehicle using data from the [Carla Simulator](https://carla.org/).
 
