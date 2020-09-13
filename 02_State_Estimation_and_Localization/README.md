@@ -4,10 +4,10 @@ This is the final project assignment of [State Estimation and Localization for S
 
 ## Project notes:
 * The data folder contains the data you will use for the project, and the rotations.py file contains a Quaternion class and other rotation-related functions that are already implemented for you.
-* The filter relies on IMU data to propagate the state forward in time, and GPS and LIDAR position updates to correct the state estimate. 
+* The filter relies on IMU data to propagate the state forward in time, and *GPS* and *LIDAR* position updates to correct the state estimate. 
 * In **part 1** you will fill in the skeleton implementation of the ES-EKF that is provided, by writing code to perform the filter prediction step and the correction step.
 * In **part 2**, you will examine the effects of sensor miscalibration on the vehicle pose estimates.
-* In **part 3**, you will explore the effects of sensor dropout, that is, when all external positioning information (from GPS and LIDAR) is lost for a short period of time. 
+* In **part 3**, you will explore the effects of sensor dropout, that is, when all external positioning information (from *GPS* and *LIDAR*) is lost for a short period of time. 
 
 ## Vehicle State Estimation on a Roadway
 
@@ -19,7 +19,7 @@ While recursive least squares updates the estimater o a static parameter, the Ka
 <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_filter.png"/>
 </p>
 
-Then, we'll use the observation model derived from GPS for example, to correct that prediction of vehicle position at time **<img src="https://render.githubusercontent.com/render/math?math=k">**. Each of these components, the initial estimate, the predicted state and the final corrected state are all random variables that we will specify by their means and covariances. In this way, we can think of the Kalman filter as a technique to fuse information from different sensors to produce a final estimate of some unknown state taking into account uncertainty in motion and our measurements. Below is shown the Kalman filter in its simplest form.
+Then, we'll use the observation model derived from *GPS* for example, to correct that prediction of vehicle position at time **<img src="https://render.githubusercontent.com/render/math?math=k">**. Each of these components, the initial estimate, the predicted state and the final corrected state are all random variables that we will specify by their means and covariances. In this way, we can think of the Kalman filter as a technique to fuse information from different sensors to produce a final estimate of some unknown state taking into account uncertainty in motion and our measurements. Below is shown the Kalman filter in its simplest form.
 
 <p align="center">
 <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_equations.png"/>
