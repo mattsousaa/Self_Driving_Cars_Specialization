@@ -161,7 +161,7 @@ def measurement_update(sensor_var, p_cov_check, y_k, p_check, v_check, q_check):
     K = p_cov_check @ h_jac.T @ np.linalg.inv(h_jac @ p_cov_check @ h_jac.T  + R) 
 
     # 3.2 Compute error state
-    # (y_k - p_check) is the innovation or difference our predicted vehicle position (p_check) and the measured position (y_k)
+    # (y_k - p_check) is the innovation or difference between our predicted vehicle position (p_check) and the measured position (y_k)
     delta_x = K @ (y_k - p_check[:3]) # [9]
 
     # 3.3 Correct predicted state
