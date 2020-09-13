@@ -19,4 +19,10 @@ While recursive least squares updates the estimater o a static parameter, the Ka
 <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_filter.png"/>
 </p>
 
-Then, we'll use the observation model derived from GPS for example, to correct that prediction of vehicle position at time **<img src="https://render.githubusercontent.com/render/math?math=k">**. Each of these components, the initial estimate, the predicted state and the final corrected state are all random variables that we will specify by their means and covariances. In this way, we can think of the Kalman filter as a technique to fuse information from different sensors to produce a final estimate of some unknown state taking into account uncertainty in motion and our measurements.
+Then, we'll use the observation model derived from GPS for example, to correct that prediction of vehicle position at time **<img src="https://render.githubusercontent.com/render/math?math=k">**. Each of these components, the initial estimate, the predicted state and the final corrected state are all random variables that we will specify by their means and covariances. In this way, we can think of the Kalman filter as a technique to fuse information from different sensors to produce a final estimate of some unknown state taking into account uncertainty in motion and our measurements. Below is shown the Kalman filter in its simplest form.
+
+<p align="center">
+<img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_equations.png"/>
+</p>
+
+
