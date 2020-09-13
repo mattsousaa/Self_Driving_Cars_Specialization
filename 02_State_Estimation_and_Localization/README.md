@@ -15,7 +15,8 @@ Kalman filtering is an algorithm that provides estimates of some unknown variabl
 
 While recursive least squares updates the estimater o a static parameter, the Kalman Filter is able to update and estimate of an evolving state. The goal of the Kalman filter is to take a probabilistic estimate of this state and update it in real time using two steps: prediction and corretion. Starting from an initial probabilistic estimate at time **<img src="https://render.githubusercontent.com/render/math?math=k-1">** as in the figure below, our goal is to use a motion model which could be derived from wheel odometry or inertial sensor measurements to predict our new state. 
 
-
 <p align="center">
 <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_filter.png"/>
 </p>
+
+Then, we'll use the observation model derived from GPS for example, to correct that prediction of vehicle position at time **<img src="https://render.githubusercontent.com/render/math?math=k">**. Each of these components, the initial estimate, the predicted state and the final corrected state are all random variables that we will specify by their means and covariances. In this way, we can think of the Kalman filter as a technique to fuse information from different sensors to produce a final estimate of some unknown state taking into account uncertainty in motion and our measurements.
