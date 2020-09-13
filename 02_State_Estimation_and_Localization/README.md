@@ -12,3 +12,5 @@ This is the final project assignment of [State Estimation and Localization for S
 ## Vehicle State Estimation on a Roadway
 
 Kalman filtering is an algorithm that provides estimates of some unknown variables given the measurements observed over time. Kalman filters have been demonstrating its usefulness in various applications. Kalman filters have relatively simple form and require small computational power. Kalman filters are used to estimate states based on linear dynamical systems in state space format.
+
+While recursive least squares updates the estimater o a static parameter, the Kalman Filter is able to update and estimate of an evolving state. The goal of the Kalman filter is to take a probabilistic estimate of this state and update it in real time using two steps: prediction and corretion. Starting from an initial probabilistic estimate at time **(<img src="https://render.githubusercontent.com/render/math?math=k-1">)**, our goal is to use a motion model which could be derived from wheel odometry or inertial sensor measurements to predict our new state. 
