@@ -57,6 +57,8 @@ The bad news is that the world does not behave in a linear fashion. For this, Ka
   <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_3/Figure_3.png" width="450" />
 </p>
 
+On these plots, the dashed red lines represent three standard deviations from the ground truth according to our estimator. This gives an indication of how well our model fits the actual dynamics of the vehicle and how well the estimator is performing overall. The estimation error should remain within the 3-sigma bounds at all times, as it does here. For more information, read the code carefully for more details.
+
 ## Key Algorithms
 * Conversion from **Euler angle** to **Quaternion**:
     ```python
