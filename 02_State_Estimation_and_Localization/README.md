@@ -38,9 +38,26 @@ The bad news is that the world does not behave in a linear fashion. For this, Ka
 * Implement the algorithm in `Python3`
 * Sample pictures for the results
 
+## Final Project: Multi-Sensor (IMU + Lidar) Fusion for Pose Estimation
 
+## Results
+* Part 1: Ideal case
+<p align="center">
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_1/Figure_2.png" width="350" />
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_1/Figure_3.png" width="350" />
+</p>
 
+* Part 2: Sensor's poor calibration
+<p align="center">
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_2/Figure_2.png" width="350" />
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_2/Figure_3.png" width="350" />
+</p>
 
+* Part 3: Sensor's infomation drops
+<p align="center">
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_3/Figure_2.png" width="350" />
+  <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/part_3/Figure_3.png" width="350" />
+</p>
 
 
 
