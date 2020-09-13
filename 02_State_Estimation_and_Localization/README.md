@@ -38,3 +38,18 @@ The bad news is that the world does not behave in a linear fashion. For this, Ka
 * Implement the algorithm in `Python3`
 * Sample pictures for the results
 
+
+
+
+
+
+
+
+## Reference
+### Websites
+* [Coursera website for this course: State Estimation and Locaization](https://www.coursera.org/learn/state-estimation-localization-self-driving-cars/home/welcome)
+* [Coursera website for the other courses from University of Toronto about Self-driving Car topics](https://www.coursera.org/specializations/self-driving-cars)
+
+### Papers & Textbooks
+* [Quaternion kinematics for the error-state Kalman filter, Sola, 2017](https://arxiv.org/pdf/1711.02508.pdf)
+* [Quaternions and Rotations, Jia, 2013](http://graphics.stanford.edu/courses/cs348a-17-winter/Papers/quaternion.pdf)
