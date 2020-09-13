@@ -27,3 +27,14 @@ Then, we'll use the observation model derived from GPS for example, to correct t
 
 The bad news is that the world does not behave in a linear fashion. For this, Kalman's extended algorithm (EKF) is used around an operation point by means of Jacobian transformation matrices. For more information on this topic, check out this [article](https://www.embedded.com/using-nonlinear-kalman-filtering-to-estimate-signals/) by Dan Simon (for free). A detailed explanation of linearization and how it relates to the EKF can be found in Chapter 13, Sections 1 and 2 of  [Dan Simon, Optimal State Estimation (2006)](https://onlinelibrary.wiley.com/doi/book/10.1002/0470045345).
 
+## Run
+* Simply `python3` to execute the code, preferably using `conda` environment
+
+## Algorithm
+### Error-State Kalman Filter for State Estimation and Localization
+* Using *IMU* and *GNSS* data as measurement input data
+* Using **error-state kinematics model** as the motion/measurement model
+* Using **quaternion kinematics** as the rotation process update
+* Implement the algorithm in `Python3`
+* Sample pictures for the results
+
