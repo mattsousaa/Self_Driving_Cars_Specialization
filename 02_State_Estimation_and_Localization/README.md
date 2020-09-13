@@ -25,4 +25,5 @@ Then, we'll use the observation model derived from GPS for example, to correct t
 <img src="https://github.com/mattsousaa/Self_Driving_Cars_Specialization/blob/master/02_State_Estimation_and_Localization/Saved%20Pictures/kalman_equations.png"/>
 </p>
 
+The bad news is that the world does not behave in a linear fashion. For this, Kalman's extended algorithm (EKF) is used around an operation point by means of Jacobian transformation matrices. For more information on this topic, check out this [article]{https://www.embedded.com/using-nonlinear-kalman-filtering-to-estimate-signals/} by Dan Simon (for free).
 
